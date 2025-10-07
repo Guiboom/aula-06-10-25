@@ -131,6 +131,13 @@ nav ul li a:hover {
     transform: translateY(-2px);
 }
 
+.Cadastro {
+    align-: center;
+    color: #000000;
+    padding: 10px;
+
+}
+
 /* Seção de produtos */
 .products {
     max-width: 1200px;
