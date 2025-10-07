@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TurboStore - Onde a tecnologia encontra a potência </title>
-<link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <!-- Cabeçalho -->
-    
+
     <header>
         <div class="header-container">
             <div class="logo">Turbo<span>Store</span></div>
@@ -43,20 +45,21 @@
         </div>
     </section>
 
-<!-- Seção Fidelidade -->
-<section id="Fidelidade" class="fidelidade">
-    <h2>Programa de Fidelidade</h2>
-    <p>Simule o Ganho de 1 ponto a cada R$1 gasto!</p>
-    <h4>A cada 200 pontos você ganha um desconto que pode ser aplicado a uma compra, que dará 10% de desconto no carrinho.</h4>
-  
-    <div class="pontos" id="pontos">0</div>
-  
-    <button onclick="adicionarPontos(50)">Simular compra de R$50</button>
-    <br><br>
-    <button onclick="trocarPontos()">Trocar 200 pontos por desconto</button>
-  
-    <p class="recompensa" id="mensagem"></p>
-  </section>
+    <!-- Seção Fidelidade -->
+    <section id="Fidelidade" class="fidelidade">
+        <h2>Programa de Fidelidade</h2>
+        <p>Simule o Ganho de 1 ponto a cada R$1 gasto!</p>
+        <h4>A cada 200 pontos você ganha um desconto que pode ser aplicado a uma compra, que dará 10% de desconto no
+            carrinho.</h4>
+
+        <div class="pontos" id="pontos">0</div>
+
+        <button onclick="adicionarPontos(50)">Simular compra de R$50</button>
+        <br><br>
+        <button onclick="trocarPontos()">Trocar 200 pontos por desconto</button>
+
+        <p class="recompensa" id="mensagem"></p>
+    </section>
 
     <!-- Carrinho lateral -->
     <div class="overlay" id="overlay"></div>
@@ -75,15 +78,34 @@
     </div>
     <section id="sobre" class="products">
         <h2 class="section-title">Sobre nós</h2>
-        <p>Na TurboStore, somos dedicados a fornecer as melhores peças de alta performance para entusiastas automotivos. Com um foco em tecnologia e qualidade, selecionamos um catálogo de produtos que inclui turbos, sistemas de injeção eletrônica avançados, bicos de alta vazão e outros componentes essenciais para otimizar o desempenho do seu carro. Acreditamos na combinação de engenharia precisa e paixão automotiva para ajudar você a alcançar seus objetivos de performance com segurança e eficiência.</p>
+        <p>Na TurboStore, somos dedicados a fornecer as melhores peças de alta performance para entusiastas automotivos.
+            Com um foco em tecnologia e qualidade, selecionamos um catálogo de produtos que inclui turbos, sistemas de
+            injeção eletrônica avançados, bicos de alta vazão e outros componentes essenciais para otimizar o desempenho
+            do seu carro. Acreditamos na combinação de engenharia precisa e paixão automotiva para ajudar você a
+            alcançar seus objetivos de performance com segurança e eficiência.</p>
     </section>
     <section id="contato" class="products">
         <h2 class="section-title">Contato</h2>
-        <p>Endereço: BR-470, km 470 - nº 2555 - Navegantes, Rio do Sul - SC, 89162-528
-            Telefone: (47) 98412-6117
-            Horário de funcionamento: 
-           07:30 - 20:00
-            </p>
+        <table border="1">
+            <tr><!-- linha -->
+                <td>Uf</td><!-- Coluna -->
+                <td>Cidade</td>
+                <td>Endereço</td>
+                <td>Contato</td>
+            </tr>
+            <tr>
+                <td>SC</td>
+                <td>Rio do Sul</td>
+                <td>BR-470, km 470 - nº 2555 - Navegantes</td>
+                <td>(47) 98412-6117</td>
+            </tr>
+            <tr>
+                <td>SP</td>
+                <td>São Paulo</td>
+                <td>Avenida Paulista</td>
+                <td>(11) 34534-2341</td>
+            </tr>
+        </table>
     </section>
 
     <!-- Rodapé -->
@@ -97,7 +119,8 @@
             </div>
         </div>
     </footer>
-<script src="js/scripts.js"></script> 
+    <script src="js/scripts.js"></script>
 
 </body>
+
 </html>
