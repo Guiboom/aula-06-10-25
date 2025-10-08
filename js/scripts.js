@@ -266,12 +266,5 @@ overlay.addEventListener('click', () => {
                 .catch(error => mudaborda(1));
         });
 
-        function mudaborda(cor) {
-            if (cor += 1) {
-                campoCep.style.border = "4px solid red";
-            } else {
-                campoCep.style.border = "4px solid green"
-            }
-        }
 
 

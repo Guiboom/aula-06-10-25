@@ -135,21 +135,21 @@ nav ul li a:hover {
 input{
     padding: 6px;
 }
+
 .Cadastro {
     font-weight: 400;
     font-size: large;
     text-align: center;
     color: #000000;
     padding: 10px;
-    outline: #000000;
-    margin: 100px;
+    margin: 10px; 
     background-color: rgb(255, 255, 255);
     border: 10px solid #9b1818;
     border-radius: 10px;
-    margin: 100px;
-    height: 900px;
-}
-.botaoCadastrar{
+    align-content: center;
+  }
+  
+  .botaoCadastrar{
     background-color: #9b1818;
     border:none;
     border-radius: 10px;
@@ -157,26 +157,46 @@ input{
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px; 
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    font-size: 16px;
     cursor: pointer;
-}
-.botaoCadastrar:hover {
-    border-radius: 5px;     
+  }
+  
+  .botaoCadastrar:hover {
+    border-radius: 5px;
     background-color: rgb(255, 0, 0);
     color: white;
-}
-.InpCadastro{
+  }
+  
+  .InpCadastro/* input */{
     background-color: rgb(212, 212, 212);
     border: black;
     border-radius: 5px;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    padding: 8px 10px;
+    width: 90%;
+    box-sizing: border-box;
+    display: block;
     font-size: 16px;
-    cursor: pointer;
-}
+    margin: 10px auto;
+  }
+  
+  @media (min-width: 768px) {
+    .Cadastro {
+      margin: 100px auto; 
+      width: 60%; 
+    }
+  
+    .InpCadastro/* input */{
+      width: 70%; 
+    }
+  
+    .botaoCadastrar {
+      width: 30%; 
+    }
+  }
+  
 
 /* Seção de produtos */
 .products {
