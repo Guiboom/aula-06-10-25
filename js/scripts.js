@@ -241,32 +241,37 @@ overlay.addEventListener('click', () => {
 });
 
 
-let pontos = localStorage.getItem('pontos') ? parseInt(localStorage.getItem('pontos')) : 0;
-const pontosEl = document.getElementById('pontos');
-const msgEl = document.getElementById('mensagem');
 
-function atualizarTela() {
-  pontosEl.textContent = pontos;
-}
 
-function adicionarPontos(valor) {
-  pontos += valor;
-  localStorage.setItem('pontos', pontos);
-  msgEl.textContent = `Você ganhou ${valor} pontos!`;
-  atualizarTela();
-}
 
-function trocarPontos() {
-  if (pontos >= 200) {
-    pontos -= 200;
-    localStorage.setItem('pontos', pontos);
-    msgEl.textContent = "🎉 Você trocou 200 pontos por um desconto!";
-    atualizarTela();
-  } else {
-    msgEl.textContent = "Você precisa de pelo menos 200 pontos!";
-  }
-}
+//API CEP\/\/\/
 
-atualizarTela();
+
+        // 1. Selecionar o elemento pelo ID
+        var campoCep = document.getElementById('cep');
+        // 2. Adicionar o event listener para o evento 'blur'(executado quando é retirado o mouse)
+        campoCep.addEventListener('keyup', function () {
+            let valorCep = campoCep.value; // pegar o valor do campoCep
+            fetch("https://viacep.com.br/ws/" + valorCep + "/json/")
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    document.getElementById("logradouro").value = data.logradouro || '';
+                    document.getElementById("bairro").value = data.bairro || '';
+                    document.getElementById("cidade").value = data.localidade || '';
+                    document.getElementById("estado").value = data.estado || '';
+                    document.getElementById("ddd").value = data.ddd || '';
+                    mudaborda(-1)
+                })
+                .catch(error => mudaborda(1));
+        });
+
+        function mudaborda(cor) {
+            if (cor += 1) {
+                campoCep.style.border = "4px solid red";
+            } else {
+                campoCep.style.border = "4px solid green"
+            }
+        }
 
 
